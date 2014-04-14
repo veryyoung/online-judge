@@ -18,8 +18,7 @@ public class TwoSum {
         for (int i = 0; i < length; i++) {
             if (!map.containsKey(numbers[i])) {
                 map.put(target - numbers[i], i);
-            }
-            if (map.containsKey(numbers[i])) {
+            } else {
                 int index = map.get(numbers[i]);
                 if (index < i) {
                     returnNums[0] = index + 1;

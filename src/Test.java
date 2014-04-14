@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: veryyoung
@@ -8,10 +10,8 @@
  */
 public class Test {
     public static void main(String[] args) {
-        TwoSum twoSumClass = new TwoSum();
-        int[] numbers = new int[]{0,4,3,0};
-        int target = 0;
-        int[] indexs = twoSumClass.twoSum(numbers, target);
-        System.out.println("index1=" + indexs[0] + " ,index2=" + indexs[1]);
+        ThreeSumClosest threeSumClosestClass = new ThreeSumClosest();
+        int[] numbers = new int[]{-1,2,1,-4};
+        System.out.println(threeSumClosestClass.threeSumClosest(numbers,1));
     }
 }
