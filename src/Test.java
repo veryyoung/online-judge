@@ -10,8 +10,11 @@ import java.util.ArrayList;
  */
 public class Test {
     public static void main(String[] args) {
-        ThreeSumClosest threeSumClosestClass = new ThreeSumClosest();
-        int[] numbers = new int[]{-1,2,1,-4};
-        System.out.println(threeSumClosestClass.threeSumClosest(numbers,1));
+        FourSum fourSumClass = new FourSum();
+        int[] numbers = new int[]{-3,-2,-1,0,0,1,2,3};
+        ArrayList<ArrayList<Integer>> list = fourSumClass.fourSum(numbers,0);
+        for(ArrayList<Integer> intList:list){
+            System.out.println(intList);
+        }
     }
 }
