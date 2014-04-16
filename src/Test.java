@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  * Created with IntelliJ IDEA.
  * User: veryyoung
@@ -10,11 +8,10 @@ import java.util.ArrayList;
  */
 public class Test {
     public static void main(String[] args) {
-        FourSum fourSumClass = new FourSum();
-        int[] numbers = new int[]{-3,-2,-1,0,0,1,2,3};
-        ArrayList<ArrayList<Integer>> list = fourSumClass.fourSum(numbers,0);
-        for(ArrayList<Integer> intList:list){
-            System.out.println(intList);
-        }
+        MedianofTwoSortedArrays clazz = new MedianofTwoSortedArrays();
+        int[] numbersA = new int[]{1, 2, 3, 4, 5};
+        int[] numbersB = new int[]{100, 101, 102};
+        System.out.println(clazz.findMedianSortedArrays(numbersA, numbersB));
+
     }
 }
