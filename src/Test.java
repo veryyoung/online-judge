@@ -8,10 +8,8 @@
  */
 public class Test {
     public static void main(String[] args) {
-        MedianofTwoSortedArrays clazz = new MedianofTwoSortedArrays();
-        int[] numbersA = new int[]{1, 2, 3, 4, 5};
-        int[] numbersB = new int[]{100, 101, 102};
-        System.out.println(clazz.findMedianSortedArrays(numbersA, numbersB));
+        LongestSubstringWithoutRepeatingCharacters clazz = new LongestSubstringWithoutRepeatingCharacters();
+        System.out.println(clazz.lengthOfLongestSubstring("bbbbbbbbb"));
 
     }
 }
