@@ -8,7 +8,7 @@
  */
 public class Test {
     public static void main(String[] args) {
-        ZigZagConversion clazz = new ZigZagConversion();
-        System.out.println(clazz.convert("PAYPALISHIRING",3));
+        ReverseInteger clazz = new ReverseInteger();
+        System.out.println(clazz.reverse(-12300));
     }
 }
