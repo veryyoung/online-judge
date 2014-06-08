@@ -8,7 +8,7 @@
  */
 public class Test {
     public static void main(String[] args) {
-        ReverseInteger clazz = new ReverseInteger();
-        System.out.println(clazz.reverse(-12300));
+        Atoi clazz = new Atoi();
+        System.out.println(clazz.atoi("  -0012a42"));
     }
 }
