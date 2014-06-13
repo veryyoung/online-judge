@@ -8,7 +8,7 @@
  */
 public class Test {
     public static void main(String[] args) {
-        Atoi clazz = new Atoi();
-        System.out.println(clazz.atoi("  -0012a42"));
+        PalindromeNumber clazz = new PalindromeNumber();
+        System.out.println(clazz.isPalindrome(122231));
     }
 }
