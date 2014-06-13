@@ -8,7 +8,7 @@
  */
 public class Test {
     public static void main(String[] args) {
-        PalindromeNumber clazz = new PalindromeNumber();
-        System.out.println(clazz.isPalindrome(122231));
+        RegularExpressionMatching clazz = new RegularExpressionMatching();
+        System.out.println(clazz.isMatch("aa","aa"));
     }
 }
