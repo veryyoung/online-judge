@@ -8,7 +8,7 @@
  */
 public class Test {
     public static void main(String[] args) {
-        RegularExpressionMatching clazz = new RegularExpressionMatching();
-        System.out.println(clazz.isMatch("aa","aa"));
+        ContainerWithMostWater clazz = new ContainerWithMostWater();
+        System.out.println(clazz.maxArea(new int[]{2,4,1,3}));
     }
 }
