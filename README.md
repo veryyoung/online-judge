@@ -1,4 +1,4 @@
 leetcode
 ========
 
-code for http://oj.leetcode.com/
+code for [leetcode oj](http://oj.leetcode.com/ "leetcode")
