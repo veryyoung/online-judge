@@ -1,3 +1,5 @@
+package me.young.leetcode;
+
 /**
  * Created by Young on 2014/9/9.
  * I = 1;

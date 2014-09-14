@@ -1,3 +1,5 @@
+package me.young.leetcode;
+
 /**
  * Created by veryyoung on 14-6-5.
  */
