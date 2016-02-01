@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by yangxiongwei on 2016/2/1.
+ * Created by veryyoung on 2016/2/1.
  */
 public class StringReverseTest {
 
