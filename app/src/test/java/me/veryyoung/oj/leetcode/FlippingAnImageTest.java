@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 
-public class FlippingAnImage1Test {
+public class FlippingAnImageTest {
 
     @Test
     public void testClearZero() {
