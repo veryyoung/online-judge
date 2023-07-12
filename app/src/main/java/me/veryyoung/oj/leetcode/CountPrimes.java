@@ -1,5 +1,8 @@
 package me.veryyoung.oj.leetcode;
 
+/**
+ * https://leetcode.com/problems/count-primes/
+ */
 
 public class CountPrimes {
     public int countPrimes(int n) {
@@ -19,7 +22,7 @@ public class CountPrimes {
                 isPrimes[j * i] = false;
             }
         }
-        
+
         int primesCount = 0;
         for (boolean isPrime : isPrimes) {
             if (isPrime) {
