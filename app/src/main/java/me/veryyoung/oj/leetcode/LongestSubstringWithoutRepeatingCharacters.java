@@ -1,27 +1,31 @@
 package me.veryyoung.oj.leetcode;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
- * Created with IntelliJ IDEA.
- * User: veryyoung
- * Email:codingyoung@gmail.com
- * Date: 14-4-16
- * Time: 下午8:38
- * To change this template use File | Settings | File Templates.
+ * 3. Longest Substring Without Repeating Characters
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
 public class LongestSubstringWithoutRepeatingCharacters {
+
     public int lengthOfLongestSubstring(String s) {
-        char[] chars = s.toCharArray();
         int start = 0;
-        int maxlen = 0;
-        int[] table = new int[256];
-        for (int i = 0; i < 256; i++) table[i] = -1;
-        for (int i = 0; i < s.length(); i++) {
-            if (table[chars[i]] != -1) {
-                while (start <= table[chars[i]]) table[chars[start++]] = -1;
+        int end = 0;
+        int maxLength = 0;
+        Set<Character> characterSet = new HashSet<>();
+        while (start < s.length() && end < s.length()) {
+            char current = s.charAt(end);
+            if (characterSet.contains(current)) {
+                characterSet.remove(s.charAt(start));
+                start++;
+            } else {
+                characterSet.add(current);
+                maxLength = Math.max(maxLength, end - start + 1);
+                end++;
             }
-            if (i - start + 1 > maxlen) maxlen = i - start + 1;
-            table[chars[i]] = i;
         }
-        return maxlen;
+        return maxLength;
     }
+
 }
