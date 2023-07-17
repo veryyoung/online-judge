@@ -2,44 +2,37 @@ package me.veryyoung.oj.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: veryyoung
- * Email:codingyoung@gmail.com
- * Date: 14-4-12
- * Time: 下午11:45
- * To change this template use File | Settings | File Templates.
+ * 15. 3Sum
+ * https://leetcode.com/problems/3sum/
  */
 public class ThreeSum {
-    public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
-        Arrays.sort(num);
-        ArrayList<ArrayList<Integer>> returnArray = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Integer> eachArray;
-        int length = num.length;
+
+    public List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> returnArray = new ArrayList<>();
+        int length = nums.length;
         for (int i = 0; i < length; i++) {
-            int target = 0 - num[i];
+            int target = 0 - nums[i];
             int start = i + 1, end = length - 1;
             while (start < end) {
-                if (num[start] + num[end] == target) {
-                    eachArray = new ArrayList<Integer>(3);
-                    eachArray.add(0, num[i]);
-                    eachArray.add(1, num[start]);
-                    eachArray.add(2, num[end]);
-                    returnArray.add(eachArray);
+                if (nums[start] + nums[end] == target) {
+                    returnArray.add(Arrays.asList(nums[i], nums[start], nums[end]));
                     start++;
                     end--;
-                    while (start < end && num[start] == num[start - 1]) start++;
-                    while (start < end && num[end] == num[end + 1]) end--;
-                } else if (num[start] + num[end] < target) {
+                    while (start < end && nums[start] == nums[start - 1]) start++;
+                    while (start < end && nums[end] == nums[end + 1]) end--;
+                } else if (nums[start] + nums[end] < target) {
                     start++;
                 } else {
                     end--;
                 }
             }
-            while (i < length - 1 && num[i] == num[i + 1]) i++;
-
+            while (i < length - 1 && nums[i] == nums[i + 1]) i++;
         }
         return returnArray;
     }
+
 }

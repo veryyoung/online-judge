@@ -9,9 +9,8 @@ public class ClosestDivisorsTest {
     @Test
     public void testClosestDivisors() {
         ClosestDivisors instance = new ClosestDivisors();
-        assertArrayEquals(instance.closestDivisors(8), new int[]{3, 3});
-        assertArrayEquals(instance.closestDivisors(123), new int[]{5, 25});
-        assertArrayEquals(instance.closestDivisors(999), new int[]{25, 40});
-
+        assertArrayEquals(new int[]{3, 3}, instance.closestDivisors(8));
+        assertArrayEquals(new int[]{5, 25}, instance.closestDivisors(123));
+        assertArrayEquals(new int[]{25, 40}, instance.closestDivisors(999));
     }
 }
