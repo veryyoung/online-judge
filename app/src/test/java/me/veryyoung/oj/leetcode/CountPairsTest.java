@@ -14,7 +14,5 @@ public class CountPairsTest {
         assertEquals(66, instance.countPairs(12, new int[][]{}));
         assertEquals(4999950000l, instance.countPairs(100000, new int[][]{}));
         assertEquals(61, instance.countPairs(12, new int[][]{{2, 6}, {11, 3}, {5, 4}, {6, 9}}));
-
-
     }
 }

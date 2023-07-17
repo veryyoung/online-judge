@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class ReverseLinkedList {
 
-    public ListNode g(ListNode head) {
+    public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
