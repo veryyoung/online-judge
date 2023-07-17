@@ -18,7 +18,10 @@ public class ReverseNodesInKGroupTest {
         assertArrayEquals(new int[]{4, 3, 2, 1, 5, 6}, toArray(instance.reverseKGroup(toNode(new int[]{1, 2, 3, 4, 5, 6}), 4)));
     }
 
-    private ReverseNodesInKGroup.ListNode toNode(int[] arr) {
+    public static ReverseNodesInKGroup.ListNode toNode(int[] arr) {
+        if (arr.length == 0) {
+            return null;
+        }
         ReverseNodesInKGroup.ListNode head = new ReverseNodesInKGroup.ListNode(arr[0]);
         if (arr.length == 1) {
             return head;
@@ -33,7 +36,10 @@ public class ReverseNodesInKGroupTest {
         return head;
     }
 
-    private int[] toArray(ReverseNodesInKGroup.ListNode head) {
+    public static int[] toArray(ReverseNodesInKGroup.ListNode head) {
+        if (head == null || head.next == null) {
+            return new int[]{};
+        }
         List<Integer> list = new LinkedList<>();
         list.add(head.val);
         ReverseNodesInKGroup.ListNode current = head.next;
