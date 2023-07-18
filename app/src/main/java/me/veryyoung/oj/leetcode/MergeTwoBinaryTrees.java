@@ -1,6 +1,8 @@
 package me.veryyoung.oj.leetcode;
 
 
+import me.veryyoung.oj.util.TreeNode;
+
 /**
  * 617. Merge Two Binary Trees
  * https://leetcode.com/problems/merge-two-binary-trees/description/
@@ -9,17 +11,6 @@ package me.veryyoung.oj.leetcode;
 
 public class MergeTwoBinaryTrees {
 
-    //Definition for a binary tree node.
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if (null == t1) {
