@@ -1,5 +1,7 @@
 package me.veryyoung.oj.cc150;
 
+import me.veryyoung.oj.util.ListNode;
+
 /**
  * 输入一个链表，输出该链表中倒数第k个结点。
  */

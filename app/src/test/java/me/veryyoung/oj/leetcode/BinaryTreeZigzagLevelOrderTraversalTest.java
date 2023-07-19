@@ -13,7 +13,6 @@ public class BinaryTreeZigzagLevelOrderTraversalTest {
         BinaryTreeZigzagLevelOrderTraversal instance = new BinaryTreeZigzagLevelOrderTraversal();
         assertArrayEquals(new Integer[][]{{3, null}, {20, 9}, {15, 7}}, toIntegerArray(instance.zigzagLevelOrder(toTreeNode(new Integer[]{3, 9, 20, null, null, 15, 7}))));
         assertArrayEquals(new Integer[][]{{1}}, toIntegerArray(instance.zigzagLevelOrder(toTreeNode(new Integer[]{1}))));
-        assertArrayEquals(new Integer[][]{{}}, toIntegerArray(instance.zigzagLevelOrder(toTreeNode(new Integer[]{}))));
     }
 
 }

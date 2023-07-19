@@ -1,6 +1,8 @@
 package me.veryyoung.oj.leetcode;
 
 
+import me.veryyoung.oj.util.ListNode;
+
 import java.util.Stack;
 
 /**
@@ -8,24 +10,6 @@ import java.util.Stack;
  * https://leetcode.com/problems/reverse-nodes-in-k-group/
  */
 public class ReverseNodesInKGroup {
-
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 
     public ListNode reverseKGroup(ListNode head, int k) {
         ListNode result = null;

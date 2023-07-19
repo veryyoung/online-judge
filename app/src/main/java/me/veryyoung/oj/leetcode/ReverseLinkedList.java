@@ -1,6 +1,7 @@
 package me.veryyoung.oj.leetcode;
 
-import me.veryyoung.oj.leetcode.ReverseNodesInKGroup.ListNode;
+
+import me.veryyoung.oj.util.ListNode;
 
 import java.util.Stack;
 

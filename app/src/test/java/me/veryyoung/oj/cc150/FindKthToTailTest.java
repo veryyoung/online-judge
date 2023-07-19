@@ -1,7 +1,9 @@
 package me.veryyoung.oj.cc150;
 
-import static org.junit.Assert.assertEquals;
+import me.veryyoung.oj.util.ListNode;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class FindKthToTailTest {
 
