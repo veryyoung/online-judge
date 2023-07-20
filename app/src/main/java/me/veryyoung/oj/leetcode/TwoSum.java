@@ -4,31 +4,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created with IntelliJ IDEA.
- * User: veryyoung
- * Email:codingyoung@gmail.com
- * Date: 14-4-12
- * Time: 上午12:48
- * To change this template use File | Settings | File Templates.
+ * 1. Two Sum
+ * https://leetcode.com/problems/two-sum/
  */
 public class TwoSum {
 
-    public int[] twoSum(int[] numbers, int target) {
-        int length = numbers.length;
-        if (length < 2) return null;
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        int[] returnNums = new int[2];
-        for (int i = 0; i < length; i++) {
-            if (!map.containsKey(numbers[i])) {
-                map.put(target - numbers[i], i);
+    public int[] twoSum(int[] nums, int target) {
+        if (nums.length < 2) return null;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (!map.containsKey(nums[i])) {
+                map.put(target - nums[i], i);
             } else {
-                int index = map.get(numbers[i]);
+                int index = map.get(nums[i]);
                 if (index < i) {
-                    returnNums[0] = index + 1;
-                    returnNums[1] = i + 1;
+                    return new int[]{index + 1, i + 1};
                 }
             }
         }
-        return returnNums;
+        return null;
     }
 }

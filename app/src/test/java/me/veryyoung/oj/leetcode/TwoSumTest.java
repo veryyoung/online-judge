@@ -9,7 +9,9 @@ public class TwoSumTest {
 
     @Test
     public void testTwoSum() {
-        int[] result = new TwoSum().twoSum(new int[]{2, 7, 11, 15}, 9);
-        assertArrayEquals(result, new int[]{1, 2});
+        TwoSum instance = new TwoSum();
+        assertArrayEquals(new int[]{1, 2}, instance.twoSum(new int[]{2, 7, 11, 15}, 9));
+        assertArrayEquals(new int[]{1, 2}, instance.twoSum(new int[]{3, 2, 4}, 6));
+        assertArrayEquals(new int[]{0, 1}, instance.twoSum(new int[]{3, 3}, 6));
     }
 }
