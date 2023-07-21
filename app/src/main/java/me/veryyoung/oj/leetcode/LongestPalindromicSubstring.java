@@ -1,44 +1,43 @@
 package me.veryyoung.oj.leetcode;
 
+/**
+ * 5. Longest Palindromic Substring
+ * https://leetcode.com/problems/longest-palindromic-substring/
+ */
 public class LongestPalindromicSubstring {
 
-
     public String longestPalindrome(String s) {
-        String str = new StringBuilder(s).reverse().toString();
-        return longestSubString(s, str);
-    }
-
-
-
-    public String longestSubString(String str1, String str2) {
-        if (str1 == null || str1.isEmpty()) {
-            return "";
+        int length = s.length();
+        if (length == 1) {
+            return s;
         }
-        if(str1.equals(str2)){
-            return str1;
-        }
-        int length = str1.length();
-        int[] array = new int[length + 1];
-        int max = 0;
-        int max_j = 0;
+        boolean[][] isPalindrome = new boolean[length][length];
         for (int i = 0; i < length; i++) {
-            for (int j = length - 1; j >= 0; j--) {
-                if (str1.charAt(i) == str2.charAt(j)) {
-                    array[j + 1] = array[j] + 1;
-                } else {
-                    array[j + 1] = 0;
-                }
+            isPalindrome[i][i] = true;
+        }
 
-                if (array[j + 1] > max && str2.substring(j + 1 - array[j + 1], j + 1).equals(str1.substring(length - j - 1, length - j - 1 + array[j + 1]))) {
-                    max = array[j + 1];
-                    max_j = j + 1;
+        int maxLength = 1;
+        int begin = 0;
+        for (int j = 0; j < length; j++) {
+            for (int i = 0; i < j; i++) {
+                if (s.charAt(i) != s.charAt(j)) {
+                    isPalindrome[i][j] = false;
+                } else {
+                    // j - 1 - (i +1) < 2
+                    if (j - i < 3) {
+                        isPalindrome[i][j] = true;
+                    } else {
+                        isPalindrome[i][j] = isPalindrome[i + 1][j - 1];
+                    }
+                }
+                if (isPalindrome[i][j] && j - i + 1 >= maxLength) {
+                    maxLength = j - i + 1;
+                    begin = i;
                 }
             }
         }
 
-        if (max_j > 0)
-            return str2.substring(max_j - max, max_j);
-        else
-            return null;
+        return s.substring(begin, begin + maxLength);
     }
+
 }
