@@ -14,7 +14,7 @@ public class GroupAnagramsTest {
         assertTrue(ListUtils.equal(arrayToList(new String[][]{{"eat", "tea", "ate"}, {"bat"}, {"tan", "nat"}}),
                 instance.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"})));
         assertTrue(ListUtils.equal(arrayToList(new String[][]{{""}}), instance.groupAnagrams(new String[]{""})));
-        assertTrue(LisgtUtils.equal(arrayToList(new String[][]{{"a"}}), instance.groupAnagrams(new String[]{"a"})));
+        assertTrue(ListUtils.equal(arrayToList(new String[][]{{"a"}}), instance.groupAnagrams(new String[]{"a"})));
     }
 
 }
