@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class ValidSudokuTest {
 
     @Test
-    public void testClearZero() {
+    public void testIsValidSudoku() {
         ValidSudoku instance = new ValidSudoku();
         assertEquals(true, instance.isValidSudoku(new char[][]
                 {

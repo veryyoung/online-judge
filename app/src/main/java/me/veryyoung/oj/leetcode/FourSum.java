@@ -2,47 +2,49 @@ package me.veryyoung.oj.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: veryyoung
- * Email:codingyoung@gmail.com
- * Date: 14-4-14
- * Time: 下午7:17
- * To change this template use File | Settings | File Templates.
+ * 18. 4Sum
+ * https://leetcode.com/problems/4sum/
  */
 public class FourSum {
-    public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
-        Arrays.sort(num);
-        ArrayList<ArrayList<Integer>> returnArray = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Integer> eachArray;
-        int length = num.length;
-        for (int i = 0; i < length; i++) {
-            for (int j = i + 1; j < length; j++) {
-                int start = j + 1, end = length - 1;
+
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        Arrays.sort(nums);
+        List<List<Integer>> result = new ArrayList<>();
+        for (int i = 0; i < nums.length - 3; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            for (int j = i + 1; j < nums.length - 2; j++) {
+                if (j > i + 1 && nums[j] == nums[j - 1]) {
+                    continue;
+                }
+
+                int start = j + 1;
+                int end = nums.length - 1;
                 while (start < end) {
-                    int sum = num[i] + num[j] + num[start] + num[end];
-                    if (sum == target) {
-                        eachArray = new ArrayList<Integer>(4);
-                        eachArray.add(0, num[i]);
-                        eachArray.add(1, num[j]);
-                        eachArray.add(2, num[start]);
-                        eachArray.add(3, num[end]);
-                        returnArray.add(eachArray);
+                    int currentSum = nums[i] + nums[j] + nums[start] + nums[end];
+                    if (currentSum == target) {
+                        result.add(Arrays.asList(nums[i], nums[j], nums[start], nums[end]));
                         start++;
                         end--;
-                        while (start < end && num[start] == num[start - 1]) start++;
-                        while (start < end && num[end] == num[end + 1]) end--;
-                    } else if (sum < target) {
+                        while (start < end && nums[start] == nums[start - 1]) {
+                            start++;
+                        }
+                        while (start < end && nums[end] == nums[end + 1]) {
+                            end--;
+                        }
+                    } else if (currentSum < target) {
                         start++;
                     } else {
                         end--;
                     }
                 }
-                while (j < length - 1 && num[j] == num[j + 1]) j++;
             }
-            while (i < length - 1 && num[i] == num[i + 1]) i++;
         }
-        return returnArray;
+        return result;
     }
+
 }
