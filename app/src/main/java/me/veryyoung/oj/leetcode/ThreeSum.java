@@ -10,6 +10,13 @@ import java.util.List;
  */
 public class ThreeSum {
 
+    /**
+     * Sort the nums first.
+     * Traverse the array, and find the target number 0 - nums[i]  by two sum
+     * <p>
+     * Time complexity is O(n) * O(n)
+     * Space complexity is O(n)
+     */
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> returnArray = new ArrayList<>();
