@@ -34,4 +34,5 @@ public class GenerateParentheses {
             generateParenthesis(result, path + ")", leftRemaining, rightRemaining - 1);
         }
     }
+    
 }
