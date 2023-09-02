@@ -1,5 +1,9 @@
 package me.veryyoung.oj.leetcode;
 
+/**
+ * 704. Binary Search
+ * https://leetcode.com/problems/binary-search/
+ */
 public class BinarySearch {
 
     public int search(int[] nums, int target) {
