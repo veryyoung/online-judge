@@ -6,6 +6,9 @@ package me.veryyoung.oj.leetcode;
  */
 public class NumberOfIslands {
 
+    /**
+     * Traversal every char of the grid, if the char is 1, mark the up、down、left、right 1 to 0
+     */
     public int numIslands(char[][] grid) {
         int rowLength = grid.length;
         int cowLength = grid[0].length;

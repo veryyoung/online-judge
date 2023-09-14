@@ -15,7 +15,7 @@ public class ListNode {
 
 
     public static int[] toArray(ListNode head) {
-        if (head == null || head.next == null) {
+        if (head == null) {
             return new int[]{};
         }
         List<Integer> list = new LinkedList<>();

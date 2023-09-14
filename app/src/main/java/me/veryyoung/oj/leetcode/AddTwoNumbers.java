@@ -2,7 +2,15 @@ package me.veryyoung.oj.leetcode;
 
 import me.veryyoung.oj.util.ListNode;
 
+/**
+ * 2. Add Two Numbers
+ * https://leetcode.com/problems/add-two-numbers/description/
+ */
 public class AddTwoNumbers {
+
+    /**
+     * Use a number carry to handle sum bigger than 10 condition
+     */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry = 0;
         ListNode list1 = l1, list2 = l2, result = new ListNode(-1), head = result;
@@ -26,7 +34,9 @@ public class AddTwoNumbers {
 
             result = result.next;
         }
-        if (carry == 1) result.next = new ListNode(1);
+        if (carry == 1) {
+            result.next = new ListNode(1);
+        }
         return head.next;
     }
 
